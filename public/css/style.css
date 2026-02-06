@@ -1,0 +1,174 @@
+body {
+    background-color: rgb(255, 170, 221);
+    font-family: cursive, sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;  
+}
+
+.buttons {
+    display: flex;
+    justify-content: center;
+    margin-top: 40px;
+    flex-direction: row;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 30px;
+}
+
+/* Valentine Button Style */
+.buttons button {
+    background: linear-gradient(135deg, #00ffe5, #ff0090);
+    color: rgb(255, 252, 252);
+    border: none;
+    padding: 14px 30px;
+    font-size: 18px;
+    font-family: 'Poppins', cursive;
+    border-radius: 30px;
+    cursor: pointer;
+    box-shadow: 0 8px 20px rgba(255, 1, 102, 0.4);
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+/* Hover Effect */
+.buttons button:hover {
+    transform: scale(1.08);
+    box-shadow: 0 12px 30px rgba(255, 95, 158, 0.6);
+}
+
+/* Heart sparkle effect */
+.buttons button::after {
+    content: "❤";
+    position: absolute;
+    top: -10px;
+    right: -10px;
+    font-size: 22px;
+    opacity: 0;
+    transition: 0.3s ease;
+}
+
+/* Show heart on hover */
+.buttons button:hover::after {
+    top: 8px;
+    right: 15px;
+    opacity: 1;
+}
+
+#no-button {
+    margin: 0 10px;
+    color: white;
+    background-color: rgb(0, 255, 225);
+    height: 40px !important;
+    width: auto;
+    border: black;
+    cursor: pointer;
+    margin-top: 10px;
+
+    p {
+        margin: 0;
+        object-fit: contain;
+    }
+}
+
+#yes-button {
+    margin: 0 10px;
+    color: white;
+    border: black;
+    background-color: rgb(0, 247, 255);
+    cursor: pointer;
+    height: 40px !important;
+    width: auto;
+    margin-top: 10px;
+
+    p {
+        margin: 0;
+        object-fit: contain;
+    }
+}
+
+/* Make responsive for mobile */
+@media (max-width: 768px) {
+    body {
+        padding: 0 20px;
+    }
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin-top: 20px;
+    padding: 20px;
+    text-align: center;
+}
+
+.message {
+    display: none;
+}
+
+.banner-gif {
+    width: 100%;
+    height: auto;
+    margin-top: 20px;
+
+    img {
+        width: auto;
+        height: 250px;
+    }
+}
+
+.language-selector {
+    margin-top: 30px;
+    position: unset;
+    font-family: Arial, sans-serif;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+.language-selector label {
+    margin-right: 10px;
+}
+
+.language-selector select {
+    padding: 5px;
+    border: 1px solid #ccc;
+    font-size: 16px;
+}
+
+.creator {
+    text-decoration: none;
+    color: #333;
+}
+
+.creator:visited {
+    text-decoration: none;
+    color: #333;
+}
+
+.creator:hover {
+    text-decoration: underline;
+    color: #555;
+}
+
+/* CSS For Mobile */
+@media (max-width: 768px) {
+    .language-selector {
+        position: unset;
+        margin-top: 30px;
+        font-family: Arial, sans-serif;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+    }
+}
